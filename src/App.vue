@@ -4,44 +4,82 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css'; // Wichtig: Für das Styling der Karte!
 import clubsData from './data/clubs.json'; // DEINE DATEN IMPORTIEREN
 
-// --- 1. Vue State-Variablen (Speicher für sich ändernde Daten)
+// --- 1. Vue State-Variablen
 const selectedClub = ref(null); // Speichert den aktuell angeklickten Club
 const clubs = ref(clubsData); // Lädt alle Club-Daten aus der JSON
 const drawer = ref(true); // Steuert, ob die Sidebar offen ist
 
-let map = null; // Variable für die Leaflet-Karte (muss außerhalb des Hooks definiert werden)
+let map = null; // Variable für die Leaflet-Karte
 
-// --- 2. Leaflet-Karte initialisieren, sobald die Komponente fertig ist
+// --- NEU: Funktion zur Initialisierung der Karte und Marker
+const initMap = (lat, lng, zoom = 15) => {
+    // 1. Karte erstellen und zentrieren
+    // Die Variable 'map' muss initialisiert werden, bevor sie in der Komponente verwendet wird
+    map = L.map('map-container').setView([lat, lng], zoom);
+
+    // 2. Kartengrafik (Tiles) hinzufügen
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '© OpenStreetMap-Mitwirkende'
+    }).addTo(map);
+
+    // 3. User-Marker hinzufügen (optional, aber hilfreich)
+    // Wir setzen einen Marker an der aktuellen Position des Nutzers
+    L.marker([lat, lng], {
+        icon: L.icon({
+            iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
+            shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
+            iconSize: [25, 41],
+            iconAnchor: [12, 41],
+            popupAnchor: [1, -34],
+            shadowSize: [41, 41]
+        })
+    }).addTo(map).bindPopup("Dein Standort").openPopup();
+
+
+    // 4. Marker für jeden Club hinzufügen
+    clubs.value.forEach(club => {
+        if (club.coordinates && club.coordinates.lat && club.coordinates.lng) {
+            const marker = L.marker([club.coordinates.lat, club.coordinates.lng]).addTo(map);
+
+            marker.on('click', () => {
+                selectedClub.value = club;
+                drawer.value = true;
+            });
+
+            marker.bindPopup(`<b>${club.name}</b>`);
+        }
+    });
+};
+
+
+// --- 5. Leaflet-Karte initialisieren (Mit Standortabfrage)
 onMounted(() => {
-  // Beispiel-Zentrum: Ändere dies auf die Koordinaten deiner Stadt!
-  const cityCenter = [52.5200, 13.4050]; 
-  
-  // Karte erstellen und in den Div-Container einfügen (wichtig: ID "map-container")
-  map = L.map('map-container').setView(cityCenter, 13);
+    // Standard-München-Zentrum (als Fallback, falls Standort abgelehnt wird)
+    const munichCenter = { lat: 48.1351, lng: 11.5820, zoom: 13 }; 
 
-  // Kartengrafik (Tiles) hinzufügen
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap-Mitwirkende'
-  }).addTo(map);
-
-  // --- 3. Marker für jeden Club hinzufügen
-  clubs.value.forEach(club => {
-    // Überprüfe, ob Koordinaten vorhanden sind, um Fehler zu vermeiden
-    if (club.coordinates && club.coordinates.lat && club.coordinates.lng) {
-        const marker = L.marker([club.coordinates.lat, club.coordinates.lng]).addTo(map);
-
-        // Klick-Logik: Wenn auf den Marker geklickt wird
-        marker.on('click', () => {
-          selectedClub.value = club; // Speichere die Club-Daten im State
-          drawer.value = true; // Sidebar öffnen
-        });
-
-        // Optional: Kleiner Popup-Text über dem Marker
-        marker.bindPopup(`<b>${club.name}</b>`);
+    // Geolocation-API des Browsers verwenden
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(
+            // Erfolg: Standort gefunden
+            (position) => {
+                const userLat = position.coords.latitude;
+                const userLng = position.coords.longitude;
+                initMap(userLat, userLng, 15); // Zoom etwas näher
+            },
+            // Fehler/Ablehnung: Standort nicht gefunden oder abgelehnt
+            (error) => {
+                console.warn(`Geolocation Error: ${error.message}. Nutze Standardkoordinaten (München).`);
+                initMap(munichCenter.lat, munichCenter.lng, munichCenter.zoom);
+            },
+            // Optionen 
+            { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+        );
+    } else {
+        // Browser unterstützt Geolocation nicht
+        console.log("Geolocation wird von diesem Browser nicht unterstützt. Nutze Standardkoordinaten.");
+        initMap(munichCenter.lat, munichCenter.lng, munichCenter.zoom);
     }
-  });
 });
-
 </script>
 
 <template>
