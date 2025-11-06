@@ -9,12 +9,12 @@
     "opening_hours": "Täglich ab 18 Uhr",
     
     
-    "current_capacity": 10,
-    "max_capacity": 60,
+    
     
     
     "age_structure": "18-25",
     "public_transport": ["U4", "U5"],
+    "next train station": "Karlsplatz (Stachus)",
     "description": "Münchener Club"
   },
   
@@ -27,13 +27,29 @@
     "music": ["PoP"], 
     "opening_hours": "Täglich ab 18 Uhr",
     
-    "current_capacity": 20,
-    "max_capacity": 40,
+    
     
     "age_structure": "18-23",
     "public_transport": ["U4","U5"],
+    "next train station": "Karlsplatz (Stachus)",
+    "description": "Die besten Cocktails der Stadt."
+  },
+  
+  {
+    "id": 3,
+    "name": "Pacha",
+    "lat": 48.142101,  
+    "lon": 11.569813,
+    "type": "Club", 
+    "music": ["PoP"], 
+    "opening_hours": "Täglich ab 23 Uhr",
+    
+    
+    
+    "age_structure": "18-23",
+    "public_transport": ["U4","U5"],
+    "next train station": "Karlsplatz (Stachus)",
     "description": "Die besten Cocktails der Stadt."
   }
-  
-  
+
 ]
