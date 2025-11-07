@@ -3,8 +3,10 @@
   {
     "id": 1,
     "name": "Pacha",
-    "lat": 48.142101,  
-    "lon": 11.569813,
+    "coordinates": {
+      "lat": 48.142101,  
+      "lng": 11.569813
+    },
     "type": "Club", 
     "music": ["PoP"], 
     "opening_hours": "Täglich ab 23 Uhr",
@@ -20,8 +22,10 @@
   {
     "id": 2,
     "name": "Neuraum",
-    "lat": 48.137154,  
-    "lon": 11.575490,
+    "coordinates": {
+      "lat": 48.137154,  
+      "lng": 11.575490
+    },
     "type": "Club", 
     "music": ["Techno", "House"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
@@ -37,8 +41,10 @@
   {
     "id": 3,
     "name": "Harry Klein",
-    "lat": 48.135125,  
-    "lon": 11.575364,
+    "coordinates": {
+      "lat": 48.135125,  
+      "lng": 11.575364
+    },
     "type": "Club", 
     "music": ["Techno", "Electro"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
@@ -54,8 +60,10 @@
   {
     "id": 4,
     "name": "Muffatwerk",
-    "lat": 48.131500,  
-    "lon": 11.593200,
+    "coordinates": {
+      "lat": 48.131500,  
+      "lng": 11.593200
+    },
     "type": "Club", 
     "music": ["Rock", "Indie", "Electronic"], 
     "opening_hours": "Freitag und Samstag ab 22 Uhr",
@@ -71,8 +79,10 @@
   {
     "id": 5,
     "name": "Blitz Club",
-    "lat": 48.135300,  
-    "lon": 11.576000,
+    "coordinates": {
+      "lat": 48.135300,  
+      "lng": 11.576000
+    },
     "type": "Club", 
     "music": ["Techno", "House"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
@@ -88,8 +98,10 @@
   {
     "id": 6,
     "name": "Cocoon Club",
-    "lat": 48.140000,  
-    "lon": 11.560000,
+    "coordinates": {
+      "lat": 48.140000,  
+      "lng": 11.560000
+    },
     "type": "Club", 
     "music": ["Techno", "House"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
@@ -105,8 +117,10 @@
   {
     "id": 7,
     "name": "Rote Sonne",
-    "lat": 48.130000,  
-    "lon": 11.580000,
+    "coordinates": {
+      "lat": 48.130000,  
+      "lng": 11.580000
+    },
     "type": "Club", 
     "music": ["Techno", "House", "Electro"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
@@ -122,8 +136,10 @@
   {
     "id": 8,
     "name": "Backstage",
-    "lat": 48.150000,  
-    "lon": 11.550000,
+    "coordinates": {
+      "lat": 48.150000,  
+      "lng": 11.550000
+    },
     "type": "Club", 
     "music": ["Rock", "Punk", "Metal"], 
     "opening_hours": "Freitag und Samstag ab 20 Uhr",
@@ -139,8 +155,10 @@
   {
     "id": 9,
     "name": "Harry's New York Bar",
-    "lat": 48.137000,  
-    "lon": 11.575000,
+    "coordinates": {
+      "lat": 48.137000,  
+      "lng": 11.575000
+    },
     "type": "Club", 
     "music": ["Jazz", "Blues"], 
     "opening_hours": "Täglich ab 18 Uhr",
@@ -156,8 +174,10 @@
   {
     "id": 10,
     "name": "Kultfabrik",
-    "lat": 48.130500,  
-    "lon": 11.600000,
+    "coordinates": {
+      "lat": 48.130500,  
+      "lng": 11.600000
+    },
     "type": "Club Complex", 
     "music": ["Various"], 
     "opening_hours": "Verschiedene Öffnungszeiten je nach Club",
