@@ -15,6 +15,159 @@
     "public_transport": ["U4","U5"],
     "next train station": "Karlsplatz (Stachus)",
     "description": "Die besten Cocktails der Stadt."
+  },
+
+  {
+    "id": 2,
+    "name": "Neuraum",
+    "lat": 48.137154,  
+    "lon": 11.575490,
+    "type": "Club", 
+    "music": ["Techno", "House"], 
+    "opening_hours": "Freitag und Samstag ab 23 Uhr",
+    
+    
+    
+    "age_structure": "20-30",
+    "public_transport": ["U1","U2","U7"],
+    "next train station": "Sendlinger Tor",
+    "description": "Ein Club mit mehreren Floors und angesagten DJs."
+  },
+
+  {
+    "id": 3,
+    "name": "Harry Klein",
+    "lat": 48.135125,  
+    "lon": 11.575364,
+    "type": "Club", 
+    "music": ["Techno", "Electro"], 
+    "opening_hours": "Freitag und Samstag ab 23 Uhr",
+    
+    
+    
+    "age_structure": "22-35",
+    "public_transport": ["U1","U2","U7"],
+    "next train station": "Sendlinger Tor",
+    "description": "Bekannt für seine visuellen Effekte und erstklassigen DJs."
+  },
+
+  {
+    "id": 4,
+    "name": "Muffatwerk",
+    "lat": 48.131500,  
+    "lon": 11.593200,
+    "type": "Club", 
+    "music": ["Rock", "Indie", "Electronic"], 
+    "opening_hours": "Freitag und Samstag ab 22 Uhr",
+    
+    
+    
+    "age_structure": "18-28",
+    "public_transport": ["U1","U2"],
+    "next train station": "Isartor",
+    "description": "Ein vielseitiger Club mit Live-Musik und DJ-Sets."
+  },
+
+  {
+    "id": 5,
+    "name": "Blitz Club",
+    "lat": 48.135300,  
+    "lon": 11.576000,
+    "type": "Club", 
+    "music": ["Techno", "House"], 
+    "opening_hours": "Freitag und Samstag ab 23 Uhr",
+    
+    
+    
+    "age_structure": "20-35",
+    "public_transport": ["U1","U2","U7"],
+    "next train station": "Sendlinger Tor",
+    "description": "Ein moderner Club mit Fokus auf elektronische Musik."
+  },
+
+  {
+    "id": 6,
+    "name": "Cocoon Club",
+    "lat": 48.140000,  
+    "lon": 11.560000,
+    "type": "Club", 
+    "music": ["Techno", "House"], 
+    "opening_hours": "Freitag und Samstag ab 23 Uhr",
+    
+    
+    
+    "age_structure": "21-35",
+    "public_transport": ["U4","U5"],
+    "next train station": "Karlsplatz (Stachus)",
+    "description": "Ein exklusiver Club mit international renommierten DJs."
+  },
+
+  {
+    "id": 7,
+    "name": "Rote Sonne",
+    "lat": 48.130000,  
+    "lon": 11.580000,
+    "type": "Club", 
+    "music": ["Techno", "House", "Electro"], 
+    "opening_hours": "Freitag und Samstag ab 23 Uhr",
+    
+    
+    
+    "age_structure": "20-35",
+    "public_transport": ["U1","U2"],
+    "next train station": "Gärtnerplatz",
+    "description": "Ein Underground-Club mit einer treuen Anhängerschaft."
+  },
+
+  {
+    "id": 8,
+    "name": "Backstage",
+    "lat": 48.150000,  
+    "lon": 11.550000,
+    "type": "Club", 
+    "music": ["Rock", "Punk", "Metal"], 
+    "opening_hours": "Freitag und Samstag ab 20 Uhr",
+    
+    
+    
+    "age_structure": "18-30",
+    "public_transport": ["S1","S2","S3"],
+    "next train station": "Laim",
+    "description": "Ein beliebter Club für Rock- und Metal-Fans mit Live-Konzerten."
+  },
+
+  {
+    "id": 9,
+    "name": "Harry's New York Bar",
+    "lat": 48.137000,  
+    "lon": 11.575000,
+    "type": "Club", 
+    "music": ["Jazz", "Blues"], 
+    "opening_hours": "Täglich ab 18 Uhr",
+    
+    
+    
+    "age_structure": "25-45",
+    "public_transport": ["U1","U2","U7"],
+    "next train station": "Sendlinger Tor",
+    "description": "Eine stilvolle Bar mit Live-Jazzmusik und einer umfangreichen Cocktailkarte."
+  },
+
+  {
+    "id": 10,
+    "name": "Kultfabrik",
+    "lat": 48.130500,  
+    "lon": 11.600000,
+    "type": "Club Complex", 
+    "music": ["Various"], 
+    "opening_hours": "Verschiedene Öffnungszeiten je nach Club",
+    
+    
+    
+    "age_structure": "18-35",
+    "public_transport": ["U2","U5"],
+    "next train station": "Oberföhring",
+    "description": "Ein großer Clubkomplex mit mehreren Clubs und Bars, die verschiedene Musikrichtungen anbieten."
   }
 
 ]
