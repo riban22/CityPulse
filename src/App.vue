@@ -1,81 +1,84 @@
 <script setup>
 import { ref, onMounted } from 'vue';
-import L from 'leaflet';
-import 'leaflet/dist/leaflet.css'; // Wichtig: Für das Styling der Karte!
-import clubsData from './data/clubs.json'; // DEINE DATEN IMPORTIEREN
+import maplibregl from 'maplibre-gl'; // NEU: MapLibre GL JS importieren
+import clubsData from './data/clubs.json'; 
 
 // --- 1. Vue State-Variablen
-const selectedClub = ref(null); // Speichert den aktuell angeklickten Club
-const clubs = ref(clubsData); // Lädt alle Club-Daten aus der JSON
-const drawer = ref(true); // Steuert, ob die Sidebar offen ist
+const selectedClub = ref(null); 
+const clubs = ref(clubsData); 
+const drawer = ref(true); 
 
-let map = null; // Variable für die Leaflet-Karte
+let map = null; 
+let markers = []; // Array, um Marker zu speichern (MapLibre Marker)
 
-// --- NEU: Funktion zur Initialisierung der Karte und Marker
+// URL für OpenMapTiles im "Dark" Stil (sehr sauber!)
+// Nutzt den MapTiler Standardstil, der auf OpenMapTiles basiert
+// Neuer Stil: Stadia Maps Light
+const mapStyleUrl = 'https://tiles.stadiamaps.com/styles/alidade_smooth.json';
+// ACHTUNG: Für kommerzielle Nutzung oder hohe Mengen brauchst du einen eigenen Key. 
+// Du kannst den Key weglassen, um einen Default-Stil zu nutzen, oder MapTiler Key nutzen.
+
+// --- NEU: Funktion zum Initialisieren der Karte und Marker (MapLibre Version)
 const initMap = (lat, lng, zoom = 15) => {
     // 1. Karte erstellen und zentrieren
-    // Die Variable 'map' muss initialisiert werden, bevor sie in der Komponente verwendet wird
-    map = L.map('map-container').setView([lat, lng], zoom);
-
-    // 2. Kartengrafik (Tiles) hinzufügen
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap-Mitwirkende'
-    }).addTo(map);
-
-    // 3. User-Marker hinzufügen (optional, aber hilfreich)
-    // Wir setzen einen Marker an der aktuellen Position des Nutzers
-    L.marker([lat, lng], {
-        icon: L.icon({
-            iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png',
-            shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png',
-            iconSize: [25, 41],
-            iconAnchor: [12, 41],
-            popupAnchor: [1, -34],
-            shadowSize: [41, 41]
-        })
-    }).addTo(map).bindPopup("Dein Standort").openPopup();
+    map = new maplibregl.Map({
+        container: 'map-container', // ID des HTML-Elements
+        style: mapStyleUrl,         // Stil der OpenMapTiles
+        center: [lng, lat],         // ACHTUNG: MapLibre erwartet [Lng, Lat]!
+        zoom: zoom
+    });
+    
+    // UI-Elemente hinzufügen (optional)
+    map.addControl(new maplibregl.NavigationControl(), 'top-right');
 
 
-    // 4. Marker für jeden Club hinzufügen
+    // 2. User-Marker hinzufügen
+    // Marker-Erstellung in MapLibre ist anders als bei Leaflet/Google
+    new maplibregl.Marker({ color: '#ff0000' }) // Roter Marker für den User
+        .setLngLat([lng, lat])
+        .setPopup(new maplibregl.Popup({ offset: 25 }).setText('Dein Standort'))
+        .addTo(map);
+
+
+    // 3. Marker für jeden Club hinzufügen
     clubs.value.forEach(club => {
         if (club.coordinates && club.coordinates.lat && club.coordinates.lng) {
-            const marker = L.marker([club.coordinates.lat, club.coordinates.lng]).addTo(map);
+            
+            const marker = new maplibregl.Marker({ color: '#00ffff' }) // Cyan Marker für Clubs
+                .setLngLat([club.coordinates.lng, club.coordinates.lat]) // ACHTUNG: [Lng, Lat]!
+                .setPopup(new maplibregl.Popup({ offset: 25 }).setText(club.name))
+                .addTo(map);
 
-            marker.on('click', () => {
+            // Klick-Logik: Klick auf den Marker öffnet das Vue-Sidebar-Popup
+            marker.getElement().addEventListener('click', () => {
                 selectedClub.value = club;
                 drawer.value = true;
             });
-
-            marker.bindPopup(`<b>${club.name}</b>`);
+            
+            markers.push(marker);
         }
     });
 };
 
 
-// --- 5. Leaflet-Karte initialisieren (Mit Standortabfrage)
+// --- 4. Standortabfrage des Browsers (Logik bleibt gleich, da es Browser-API ist)
 onMounted(() => {
-    // Standard-München-Zentrum (als Fallback, falls Standort abgelehnt wird)
     const munichCenter = { lat: 48.1351, lng: 11.5820, zoom: 13 }; 
 
-    // Geolocation-API des Browsers verwenden
     if (navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(
-            // Erfolg: Standort gefunden
             (position) => {
                 const userLat = position.coords.latitude;
                 const userLng = position.coords.longitude;
-                initMap(userLat, userLng, 15); // Zoom etwas näher
+                initMap(userLat, userLng, 15);
             },
-            // Fehler/Ablehnung: Standort nicht gefunden oder abgelehnt
             (error) => {
                 console.warn(`Geolocation Error: ${error.message}. Nutze Standardkoordinaten (München).`);
                 initMap(munichCenter.lat, munichCenter.lng, munichCenter.zoom);
             },
-            // Optionen 
             { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
         );
     } else {
-        // Browser unterstützt Geolocation nicht
         console.log("Geolocation wird von diesem Browser nicht unterstützt. Nutze Standardkoordinaten.");
         initMap(munichCenter.lat, munichCenter.lng, munichCenter.zoom);
     }

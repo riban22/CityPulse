@@ -9,7 +9,7 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import '@mdi/font/css/materialdesignicons.css' // Icons
 
-// Vuetify instanziieren und Dark Theme setzen
+// Vuetify instanziieren
 const vuetify = createVuetify({
   components,
   directives,
@@ -21,5 +21,5 @@ const vuetify = createVuetify({
   },
 })
 
-// Vue App erstellen und mit Vuetify verknüpfen
+// Standard Vue App Mount
 createApp(App).use(vuetify).mount('#app')
