@@ -2,58 +2,84 @@
   {
     "id": 1,
     "name": "089 Bar",
-    "coordinates": {  
-      "lat": 48.142250, 
-      "lng": 11.569821 
+    "coordinates": {
+      "lat": 48.142250,
+      "lng": 11.569821
     },
-    "type": "Club" ,
-    "music": ["R&B", "Afro Beats"],
+    "type": "Club",
+    "music": [
+      "R&B",
+      "Afro Beats"
+    ],
     "opening_hours": "Täglich ab 18 Uhr",
+<<<<<<< HEAD
     
     
     
     
     
+=======
+    "current_capacity": 10,
+    "max_capacity": 60,
+>>>>>>> fcec349ce2a6664b9f077c9de78cc79580ab4639
     "age_structure": "18-25",
-    "public_transport": ["U4", "U5"],
+    "public_transport": [
+      "U4",
+      "U5"
+    ],
     "next train station": "Karlsplatz (Stachus)",
     "description": "Münchener Club"
   },
-  
   {
     "id": 2,
     "name": "Sweet Club",
-    "coordinates": { 
-      "lat": 48.142276, 
-      "lng": 11.570639 
+    "coordinates": {
+      "lat": 48.142276,
+      "lng": 11.570639
     },
-    "type": "Club", 
-    "music": ["PoP"], 
+    "type": "Club",
+    "music": [
+      "PoP"
+    ],
     "opening_hours": "Täglich ab 18 Uhr",
+<<<<<<< HEAD
     
     
     
+=======
+    "current_capacity": 20,
+    "max_capacity": 40,
+>>>>>>> fcec349ce2a6664b9f077c9de78cc79580ab4639
     "age_structure": "18-23",
-    "public_transport": ["U4","U5"],
+    "public_transport": [
+      "U4",
+      "U5"
+    ],
     "next train station": "Karlsplatz (Stachus)",
     "description": "Die besten Cocktails der Stadt."
   },
-  
   {
     "id": 3,
     "name": "Pacha",
-    "lat": 48.142101,  
-    "lon": 11.569813,
-    "type": "Club", 
-    "music": ["PoP"], 
+    "coordinates": {
+      "lat": 48.142101,
+      "lng": 11.569813
+    },
+    "type": "Club",
+    "music": [
+      "PoP"
+    ],
     "opening_hours": "Täglich ab 23 Uhr",
-    
-    
-    
+    "current_capacity": 30,
+    "max_capacity": 150,
     "age_structure": "18-23",
-    "public_transport": ["U4","U5"],
+    "public_transport": [
+      "U4",
+      "U5"
+    ],
     "next train station": "Karlsplatz (Stachus)",
     "description": "Die besten Cocktails der Stadt."
+<<<<<<< HEAD
   },
 
   {
@@ -173,5 +199,7 @@
     "public_transport": ["U4","U5"],
     "next train station": "Karlsplatz (Stachus)",
     "description": "Die besten Cocktails der Stadt."
+=======
+>>>>>>> fcec349ce2a6664b9f077c9de78cc79580ab4639
   }
 ]

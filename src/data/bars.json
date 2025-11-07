@@ -1,0 +1,36 @@
+[
+  {
+    "id": 1,
+    "name": "The Hood Bar",
+    "coordinates": {  
+      "lat": 48.148831, 
+      "lng": 11.5347688
+    },
+    "type": "Bar" ,
+    "Art": ["Entspannt", "Cool"],
+    "opening_hours": "Täglich ab 19 Uhr",
+    
+    "age_structure": "18-25",
+    "public_transport": [],
+    "next train station": "",
+    "description": "Lockere Bar"
+  },
+
+   {
+    "id": 2,
+    "name": "LUX Bar & Restaurant",
+    "coordinates": {  
+      "lat": 48.1372119,
+      "lng": 11.578953
+    },
+    "type": "Bar" ,
+    "Art": ["Chic", "Extravagant"],
+    "opening_hours": "Täglich ab 17 Uhr",
+    
+    "age_structure": "24-50",
+    "public_transport": [],
+    "next train station": "",
+    "description": "Schöne Bar in Münchens Innenstadt"
+  }
+  
+]

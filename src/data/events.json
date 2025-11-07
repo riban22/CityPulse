@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Grand Opening: Neue Cocktail Bar",
+    "date": "2025-12-08",
+    "time": "20:00",
+    "location": "The Hood Bar, München",
+    "category": "Bar",
+    "description": "Feiern Sie die Eröffnung unserer neuesten Location mit Special Drinks und DJ-Set."
+  },
+  {
+    "id": 2,
+    "title": "Techno Night mit DJane Luna",
+    "date": "2026-01-07",
+    "time": "22:30",
+    "location": "Harry Klein, München",
+    "category": "Club",
+    "description": "Lokaler Act Luna spielt die besten Techno-Tracks bis in die frühen Morgenstunden."
+  },
+  {
+    "id": 3,
+    "title": "House Classics Special",
+    "date": "2026-02-23",
+    "time": "23:00",
+    "location": "Pacha München",
+    "category": "Club",
+    "description": "Eine Nacht voller zeitloser House-Hymnen. Dresscode: Chic."
+  },
+  {
+    "id": 4,
+    "title": "Weinprobe & Jazz-Abend",
+    "date": "2026-02-24",
+    "time": "19:00",
+    "location": "LUX Bar & Restaurant, München",
+    "category": "Bar",
+    "description": "Entdecken Sie unsere neue Weinkarte, begleitet von Live-Jazz."
+  }
+]
