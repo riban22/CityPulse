@@ -1,26 +1,17 @@
-// src/router/index.js
 import { createRouter, createWebHistory } from 'vue-router';
-
-// Lade die Komponenten (Seiten)
-import ClubMap from '../views/ClubMap.vue';
+import MainMap from '../views/MainMap.vue'; // Anpassen wenn du es MainMap genannt hast
 import Events from '../views/Events.vue';
-import Bars from '../views/Bars.vue';
 
 const routes = [
   {
-    path: '/', // Startseite (Clubs)
-    name: 'Clubs',
-    component: ClubMap
+    path: '/',
+    name: 'Map',
+    component: MainMap // Alles auf einer Karte
   },
   {
-    path: '/events', // Events-Seite
+    path: '/events',
     name: 'Events',
     component: Events
-  },
-  {
-    path: '/bars', // Bars-Seite
-    name: 'Bars',
-    component: Bars
   }
 ];
 
