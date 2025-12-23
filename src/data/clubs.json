@@ -10,12 +10,12 @@
     "type": "Club", 
     "music": ["PoP"], 
     "opening_hours": "Täglich ab 23 Uhr",
-    
-    
+    "capacity_simulated": "High",
+    "clientele": "International",
     
     "age_structure": "18-23",
     "public_transport": ["U4","U5"],
-    "next train station": "Karlsplatz (Stachus)",
+    "next_station": "Karlsplatz (Stachus)",
     "description": "Die besten Cocktails der Stadt."
   },
 
@@ -29,12 +29,14 @@
     "type": "Club", 
     "music": ["Techno", "House"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
-    
-    
+    "capacity_simulated": "High",
+    "clientele": "Jung und Trendy",
+
+
     
     "age_structure": "20-30",
     "public_transport": ["U1","U2","U7"],
-    "next train station": "Sendlinger Tor",
+    "next_station": "Sendlinger Tor",
     "description": "Ein Club mit mehreren Floors und angesagten DJs."
   },
 
@@ -48,12 +50,13 @@
     "type": "Club", 
     "music": ["Techno", "Electro"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
-    
-    
+    "capacity_simulated": "High",
+    "clientele": "Elektronische Musikliebhaber",
+
     
     "age_structure": "22-35",
     "public_transport": ["U1","U2","U7"],
-    "next train station": "Sendlinger Tor",
+    "next_station": "Sendlinger Tor",
     "description": "Bekannt für seine visuellen Effekte und erstklassigen DJs."
   },
 
@@ -67,12 +70,13 @@
     "type": "Club", 
     "music": ["Rock", "Indie", "Electronic"], 
     "opening_hours": "Freitag und Samstag ab 22 Uhr",
-    
-    
+    "capacity_simulated": "High",
+    "clientele": "Live-Musik Fans",
+
     
     "age_structure": "18-28",
     "public_transport": ["U1","U2"],
-    "next train station": "Isartor",
+    "next_station": "Isartor",
     "description": "Ein vielseitiger Club mit Live-Musik und DJ-Sets."
   },
 
@@ -86,12 +90,13 @@
     "type": "Club", 
     "music": ["Techno", "House"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
-    
-    
+    "capacity_simulated": "Low",
+    "clientele": "Elektronische Musikliebhaber",
+
     
     "age_structure": "20-35",
     "public_transport": ["U1","U2","U7"],
-    "next train station": "Sendlinger Tor",
+    "next_station": "Sendlinger Tor",
     "description": "Ein moderner Club mit Fokus auf elektronische Musik."
   },
 
@@ -105,12 +110,13 @@
     "type": "Club", 
     "music": ["Techno", "House"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
-    
-    
+    "capacity_simulated": "High",
+    "clientele": "Exklusiv",
+
     
     "age_structure": "21-35",
     "public_transport": ["U4","U5"],
-    "next train station": "Karlsplatz (Stachus)",
+    "next_station": "Karlsplatz (Stachus)",
     "description": "Ein exklusiver Club mit international renommierten DJs."
   },
 
@@ -124,12 +130,13 @@
     "type": "Club", 
     "music": ["Techno", "House", "Electro"], 
     "opening_hours": "Freitag und Samstag ab 23 Uhr",
-    
-    
+    "capacity_simulated": "Low",
+    "clientele": "Underground",
+
     
     "age_structure": "20-35",
     "public_transport": ["U1","U2"],
-    "next train station": "Gärtnerplatz",
+    "next_station": "Gärtnerplatz",
     "description": "Ein Underground-Club mit einer treuen Anhängerschaft."
   },
 
@@ -143,12 +150,13 @@
     "type": "Club", 
     "music": ["Rock", "Punk", "Metal"], 
     "opening_hours": "Freitag und Samstag ab 20 Uhr",
-    
-    
+    "capacity_simulated": "High",
+    "clientele": "Rockfans",
+
     
     "age_structure": "18-30",
     "public_transport": ["S1","S2","S3"],
-    "next train station": "Laim",
+    "next_station": "Laim",
     "description": "Ein beliebter Club für Rock- und Metal-Fans mit Live-Konzerten."
   },
 
@@ -162,12 +170,13 @@
     "type": "Club", 
     "music": ["Jazz", "Blues"], 
     "opening_hours": "Täglich ab 18 Uhr",
-    
-    
+    "capacity_simulated": "Low",
+    "clientele": "Jazzliebhaber",
+
     
     "age_structure": "25-45",
     "public_transport": ["U1","U2","U7"],
-    "next train station": "Sendlinger Tor",
+    "next_station": "Sendlinger Tor",
     "description": "Eine stilvolle Bar mit Live-Jazzmusik und einer umfangreichen Cocktailkarte."
   },
 
@@ -181,13 +190,16 @@
     "type": "Club Complex", 
     "music": ["Various"], 
     "opening_hours": "Verschiedene Öffnungszeiten je nach Club",
-    
+    "capacity_simulated": "Low",
+    "clientele": "Vielseitig",
+
     
     
     "age_structure": "18-35",
     "public_transport": ["U2","U5"],
-    "next train station": "Oberföhring",
+    "next_station": "Oberföhring",
     "description": "Ein großer Clubkomplex mit mehreren Clubs und Bars, die verschiedene Musikrichtungen anbieten."
+     
   }
 
 ]

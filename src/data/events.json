@@ -34,5 +34,59 @@
     "location": "LUX Bar & Restaurant, München",
     "category": "Bar",
     "description": "Entdecken Sie unsere neue Weinkarte, begleitet von Live-Jazz."
+  },
+  {
+    "id": 5,
+    "title": "90er Party im Neuraum",
+    "date": "2026-03-15",
+    "time": "22:00",
+    "location": "Neuraum, München",
+    "category": "Club",
+    "description": "Tanzen Sie zu den größten Hits der 90er Jahre mit Special Guests."
+  },
+  {
+    "id": 6,
+    "title": "Sommerfest auf der Dachterrasse",
+    "date": "2026-06-20",
+    "time": "18:00",
+    "location": "Zephyr Bar, München",
+    "category": "Bar",
+    "description": "Genießen Sie Cocktails und Snacks mit Blick über die Stadt."
+  },
+  {
+    "id": 7,
+    "title": "Live DJ Set: Electro Beats",
+    "date": "2026-07-10",
+    "time": "23:00",
+    "location": "Muffatwerk, München",
+    "category": "Club",
+    "description": "Erleben Sie eine Nacht voller energiegeladener Electro-Beats mit DJ Max."
+  },
+  {
+    "id": 8,
+    "title": "Afterwork Happy Hour",
+    "date": "2026-08-05",
+    "time": "17:00",
+    "location": "Bar Gabányi, München",
+    "category": "Bar",
+    "description": "Starten Sie ins Wochenende mit erfrischenden Drinks und Snacks."
+  },
+  {
+    "id": 9,
+    "title": "Latin Dance Night",
+    "date": "2026-09-12",
+    "time": "22:00",
+    "location": "Pacha München",
+    "category": "Club",
+    "description": "Tanzen Sie zu heißen Latin Rhythmen mit Live-Band."
+  },
+  {
+    "id": 10,
+    "title": "Cocktail Workshop",
+    "date": "2026-10-18",
+    "time": "19:30",
+    "location": "The Hood Bar, München",
+    "category": "Bar",
+    "description": "Lernen Sie die Kunst der Cocktailzubereitung von unseren Top-Barkeepern."
   }
 ]
