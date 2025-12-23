@@ -203,28 +203,40 @@ onMounted(() => {
     </v-menu>
 
     <v-navigation-drawer v-model="drawer" temporary width="350" color="#1e1e1e" location="right" style="z-index: 2000;" elevation="5">
-        <v-card v-if="selectedLocation" class="pa-4" color="transparent" flat> 
-            <v-card-title class="text-h5 text-white font-weight-bold">{{ selectedLocation.name }}</v-card-title>
-            <v-chip :color="selectedLocation.category === 'Club' ? 'cyan' : 'orange'" class="ma-2" label size="small">
-                <v-icon start size="small" :icon="selectedLocation.category === 'Club' ? 'mdi-music' : 'mdi-glass-cocktail'"></v-icon> {{ selectedLocation.category }}
-            </v-chip>
-            <div v-if="selectedLocation.category === 'Club'">
-                 <v-chip :color="selectedLocation.capacity_simulated === 'High' ? 'red' : 'green'" class="ma-2" label size="small">Füllstand: {{ selectedLocation.capacity_simulated || 'N/A' }}</v-chip>
-                <v-divider class="my-3"></v-divider>
-                <v-list density="compact" bg-color="transparent" class="text-grey-lighten-1">
-                    <v-list-item prepend-icon="mdi-music-note" :title="`Musik: ${selectedLocation.music ? selectedLocation.music.join(', ') : 'N/A'}`"></v-list-item>
-                    <v-list-item prepend-icon="mdi-account-multiple" :title="`Clientèle: ${selectedLocation.clientele || 'N/A'}`"></v-list-item>
-                </v-list>
+    <v-card v-if="selectedLocation" class="pa-4" color="transparent" flat> 
+        <v-card-title class="text-h5 text-white font-weight-bold">{{ selectedLocation.name }}</v-card-title>
+        
+        <v-chip :color="selectedLocation.category === 'Club' ? 'cyan' : 'orange'" class="ma-2" label size="small">
+            <v-icon start size="small" :icon="selectedLocation.category === 'Club' ? 'mdi-music' : 'mdi-glass-cocktail'"></v-icon> {{ selectedLocation.category }}
+        </v-chip>
+
+        <v-chip v-if="selectedLocation.category === 'Club'" :color="selectedLocation.capacity_simulated === 'High' ? 'red' : 'green'" class="ma-2" label size="small">
+            Füllstand: {{ selectedLocation.capacity_simulated || 'N/A' }}
+        </v-chip>
+
+        <v-divider class="my-3" color="grey"></v-divider>
+
+        <v-list density="compact" bg-color="transparent" class="text-grey-lighten-1">
+            <v-list-item v-if="selectedLocation.category === 'Club'" prepend-icon="mdi-music-note" :title="`Musik: ${selectedLocation.music ? selectedLocation.music.join(', ') : 'N/A'}`"></v-list-item>
+            <v-list-item v-else prepend-icon="mdi-tag" :title="`Art: ${selectedLocation.Art ? selectedLocation.Art.join(', ') : 'N/A'}`"></v-list-item>
+
+            <v-list-item prepend-icon="mdi-account-multiple" :title="`Clientèle: ${selectedLocation.clientele || 'N/A'}`"></v-list-item>
+            <v-list-item prepend-icon="mdi-account-search" :title="`Alter: ${selectedLocation.age_structure || 'N/A'}`"></v-list-item>
+
+            <v-list-item prepend-icon="mdi-clock" :title="`Öffnungszeiten: ${selectedLocation.opening_hours || 'N/A'}`"></v-list-item>
+
+            <v-list-item prepend-icon="mdi-train-car" :title="`Anbindung: ${selectedLocation.public_transport ? selectedLocation.public_transport.join(', ') : 'N/A'}`"></v-list-item>
+            <v-list-item prepend-icon="mdi-map-marker-radius" :title="`Station: ${selectedLocation.next_station || 'N/A'}`"></v-list-item>
+
+            <v-divider class="my-3" color="grey"></v-divider>
+
+            <div class="pa-2 text-caption text-grey-lighten-1">
+                <div class="font-weight-bold mb-1 text-uppercase">Beschreibung:</div>
+                {{ selectedLocation.description || 'Keine Beschreibung verfügbar.' }}
             </div>
-            <div v-else>
-                <v-divider class="my-3"></v-divider>
-                <v-list density="compact" bg-color="transparent" class="text-grey-lighten-1">
-                    <v-list-item prepend-icon="mdi-tag" :title="`Art: ${selectedLocation.Art ? selectedLocation.Art.join(', ') : 'N/A'}`"></v-list-item>
-                    <v-list-item prepend-icon="mdi-clock" :title="`Open: ${selectedLocation.opening_hours || 'N/A'}`"></v-list-item>
-                </v-list>
-            </div>
-        </v-card>
-    </v-navigation-drawer>
+        </v-list>
+    </v-card>
+</v-navigation-drawer>
 
     <div id="map-container"></div>
   </div>
