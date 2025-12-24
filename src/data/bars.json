@@ -31,6 +31,356 @@
     "public_transport": [],
     "next train station": "",
     "description": "Schöne Bar in Münchens Innenstadt"
+  },
+
+   {
+    "id": 3,
+    "name": "Zephyr Bar",
+    "coordinates": {  
+      "lat": 48.140200,
+      "lng": 11.567400
+    },
+    "type": "Bar" ,
+    "Art": ["Modern", "Trendy"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    
+    "age_structure": "20-35",
+    "public_transport": [],
+    "next train station": "",
+    "description": "Beliebte Bar mit kreativen Cocktails"
+  },
+
+   {
+    "id": 4,
+    "name": "Bar Gabányi",
+    "coordinates": {  
+      "lat": 48.135500,
+      "lng": 11.576300
+    },
+    "type": "Bar" ,
+    "Art": ["Klassisch", "Gemütlich"],
+    "opening_hours": "Täglich ab 16 Uhr",
+    
+    "age_structure": "30-60",
+    "public_transport": [],
+    "next train station": "",
+    "description": "Traditionelle Bar mit einer großen Auswahl an Getränken"
+  },
+
+   {
+    "id": 5,
+    "name": "Schumann's Bar",
+    "coordinates": {  
+      "lat": 48.139000,
+      "lng": 11.567800
+    },
+    "type": "Bar" ,
+    "Art": ["Elegant", "Luxuriös"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    
+    "age_structure": "25-45",
+    "public_transport": [],
+    "next train station": "",
+    "description": "Berühmte Bar mit exquisiten Cocktails und stilvollem Ambiente"
+  },
+  {
+    "id": 6,
+    "name": "Pusser's Bar",
+    "coordinates": { "lat": 48.140134, "lng": 11.580432 },
+    "type": "Bar",
+    "Art": ["Klassisch", "Cocktail Bar"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "25-60",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Odeonsplatz",
+    "description": "Legendäre amerikanische Bar, bekannt für den 'Painkiller' Cocktail."
+  },
+  {
+    "id": 7,
+    "name": "Die Goldene Bar",
+    "coordinates": { "lat": 48.144211, "lng": 11.585543 },
+    "type": "Bar",
+    "Art": ["Chic", "Elegant"],
+    "opening_hours": "Täglich ab 11 Uhr",
+    "age_structure": "25-50",
+    "public_transport": ["U4", "U5"],
+    "next_station": "Lehel",
+    "description": "Historisches Ambiente im Haus der Kunst mit wunderschöner Terrasse."
+  },
+  {
+    "id": 8,
+    "name": "Juleps New York Bar",
+    "coordinates": { "lat": 48.131122, "lng": 11.597734 },
+    "type": "Bar",
+    "Art": ["Cool", "Cocktail Bar"],
+    "opening_hours": "Täglich ab 17 Uhr",
+    "age_structure": "20-45",
+    "public_transport": ["S1", "S8", "U4", "U5"],
+    "next_station": "Max-Weber-Platz",
+    "description": "Amerikanisches Flair mit großer Cocktailkarte und Happy Hour."
+  },
+  {
+    "id": 9,
+    "name": "Lost Weekend",
+    "coordinates": { "lat": 48.150822, "lng": 11.580123 },
+    "type": "Bar",
+    "Art": ["Entspannt", "Modern"],
+    "opening_hours": "Täglich ab 10 Uhr (Bar abends)",
+    "age_structure": "18-30",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Universität",
+    "description": "Kombination aus Buchladen, Café und Bar – sehr beliebt bei Studenten."
+  },
+  {
+    "id": 10,
+    "name": "Alter Simpl",
+    "coordinates": { "lat": 48.150533, "lng": 11.575912 },
+    "type": "Bar",
+    "Art": ["Klassisch", "Gemütlich"],
+    "opening_hours": "Täglich ab 17 Uhr",
+    "age_structure": "20-70",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Universität",
+    "description": "Traditionsreiche Künstlerkneipe mit viel Münchner Geschichte."
+  },
+  {
+    "id": 11,
+    "name": "Negroni Bar",
+    "coordinates": { "lat": 48.127834, "lng": 11.592345 },
+    "type": "Bar",
+    "Art": ["Chic", "Cool"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "25-50",
+    "public_transport": ["Tram 18", "U2", "U7"],
+    "next_station": "Silberhornstraße",
+    "description": "Stilvolle Bar im Haidhausen-Stil mit Fokus auf klassische Drinks."
+  },
+  {
+    "id": 12,
+    "name": "Havanna Club",
+    "coordinates": { "lat": 48.136544, "lng": 11.581234 },
+    "type": "Bar",
+    "Art": ["Extravagant", "Cocktail Bar"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "21-45",
+    "public_transport": ["S1-S8"],
+    "next_station": "Isartor",
+    "description": "Spezialisiert auf Rum-Spezialitäten und kubanisches Flair."
+  },
+  {
+    "id": 13,
+    "name": "Barer 47",
+    "coordinates": { "lat": 48.150122, "lng": 11.573455 },
+    "type": "Bar",
+    "Art": ["Entspannt", "Studentisch"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "18-30",
+    "public_transport": ["Tram 27", "U3", "U6"],
+    "next_station": "Universität",
+    "description": "Klassische Maxvorstadt-Bar mit entspannter Atmosphäre, ideal für Studenten."
+  },
+  {
+    "id": 14,
+    "name": "James T. Hunt",
+    "coordinates": { "lat": 48.153455, "lng": 11.571233 },
+    "type": "Bar",
+    "Art": ["Cool", "Trendy"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "20-40",
+    "public_transport": ["U2", "U8"],
+    "next_station": "Josephsplatz",
+    "description": "Stylische Bar mit dunklem Holz und exzellenten Drinks, benannt nach dem Rennfahrer."
+  },
+  {
+    "id": 15,
+    "name": "The High",
+    "coordinates": { "lat": 48.132455, "lng": 11.574566 },
+    "type": "Bar",
+    "Art": ["Modern", "Chic"],
+    "opening_hours": "Di-Sa ab 19 Uhr",
+    "age_structure": "25-45",
+    "public_transport": ["U1", "U2", "U7"],
+    "next_station": "Fraunhoferstraße",
+    "description": "Kleine, feine Bar im Glockenbachviertel mit Fokus auf hochwertige Highballs."
+  },
+  {
+    "id": 16,
+    "name": "Pussers New York Bar",
+    "coordinates": { "lat": 48.140233, "lng": 11.580677 },
+    "type": "Bar",
+    "Art": ["Klassisch", "Elegant"],
+    "opening_hours": "Täglich ab 17 Uhr",
+    "age_structure": "30-60",
+    "public_transport": ["U3", "U4", "U5", "U6"],
+    "next_station": "Odeonsplatz",
+    "description": "Eine der besten Adressen für klassische Cocktailkultur in München."
+  },
+  {
+    "id": 17,
+    "name": "Götterspeise",
+    "coordinates": { "lat": 48.129888, "lng": 11.572344 },
+    "type": "Bar",
+    "Art": ["Gemütlich", "Bunt"],
+    "opening_hours": "Täglich ab 10 Uhr (Barbetrieb abends)",
+    "age_structure": "20-50",
+    "public_transport": ["U1", "U2", "U7"],
+    "next_station": "Fraunhoferstraße",
+    "description": "Café am Tag, gemütliche Bar am Abend mit einer sehr persönlichen Note."
+  },
+  {
+    "id": 18,
+    "name": "Call Me Drella",
+    "coordinates": { "lat": 48.140899, "lng": 11.567122 },
+    "type": "Bar",
+    "Art": ["Extravagant", "Bunt"],
+    "opening_hours": "Do-Sa ab 20 Uhr",
+    "age_structure": "21-35",
+    "public_transport": ["U4", "U5"],
+    "next_station": "Karlsplatz (Stachus)",
+    "description": "Mischung aus Bar und Club mit theatralischem Design und Pop-Art Flair."
+  },
+  {
+    "id": 19,
+    "name": "Master's Home",
+    "coordinates": { "lat": 48.136788, "lng": 11.583455 },
+    "type": "Bar",
+    "Art": ["Klassisch", "Kolonialstil"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "25-55",
+    "public_transport": ["S1-S8"],
+    "next_station": "Isartor",
+    "description": "Einzigartige Atmosphäre im Kolonialstil, bekannt für italienische Menüs und Cocktails."
+  },
+  {
+    "id": 20,
+    "name": "Ksar Bar Club",
+    "coordinates": { "lat": 48.132122, "lng": 11.571233 },
+    "type": "Bar",
+    "Art": ["Cool", "Modern"],
+    "opening_hours": "Täglich ab 20 Uhr",
+    "age_structure": "20-40",
+    "public_transport": ["U1", "U2", "U7"],
+    "next_station": "Sendlinger Tor",
+    "description": "Chillige Bar mit elektronischer Musik und sehr guten Lounge-Sitzmöglichkeiten."
+  },
+  {
+    "id": 21,
+    "name": "Schall und Rauch",
+    "coordinates": { "lat": 48.151122, "lng": 11.578944 },
+    "type": "Bar",
+    "Art": ["Gemütlich", "Studentisch"],
+    "opening_hours": "Täglich ab 10 Uhr (Barbetrieb bis spät)",
+    "age_structure": "18-30",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Universität",
+    "description": "Die klassische Studenten-Institution direkt neben der LMU. Bekannt für Frühstück und lange Nächte."
+  },
+  {
+    "id": 22,
+    "name": "Tumult",
+    "coordinates": { "lat": 48.147822, "lng": 11.562311 },
+    "type": "Bar",
+    "Art": ["Alternativ", "Cool"],
+    "opening_hours": "Täglich ab 20 Uhr",
+    "age_structure": "19-28",
+    "public_transport": ["U2", "U8"],
+    "next_station": "Theresienstraße",
+    "description": "Urig-alternative Bar mit günstigen Preisen und einer sehr entspannten Atmosphäre."
+  },
+  {
+    "id": 23,
+    "name": "Minna Thiel",
+    "coordinates": { "lat": 48.147955, "lng": 11.566788 },
+    "type": "Bar",
+    "Art": ["Kreativ", "Draußen"],
+    "opening_hours": "Täglich ab 16 Uhr",
+    "age_structure": "18-35",
+    "public_transport": ["U2", "Tram 27"],
+    "next_station": "Pinakotheken",
+    "description": "Ein umgebauter Schienenbus vor der HFF. Einzigartiger Vibe im Museumsviertel."
+  },
+  {
+    "id": 24,
+    "name": "Das Provisorium",
+    "coordinates": { "lat": 48.152344, "lng": 11.576122 },
+    "type": "Bar",
+    "Art": ["Studentisch", "Urig"],
+    "opening_hours": "Mo-Sa ab 20 Uhr",
+    "age_structure": "18-26",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Universität",
+    "description": "Einfach, ehrlich, studentisch. Hier trifft man sich auf ein schnelles Bier nach der Vorlesung."
+  },
+  {
+    "id": 25,
+    "name": "Santo Amor",
+    "coordinates": { "lat": 48.153122, "lng": 11.583455 },
+    "type": "Bar",
+    "Art": ["Trendy", "Chic"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "22-40",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Giselastraße",
+    "description": "Etwas schicker und moderner, direkt an der Grenze zur Leopoldstraße."
+  },
+  {
+    "id": 26,
+    "name": "Alter Simpl",
+    "coordinates": { "lat": 48.150533, "lng": 11.575912 },
+    "type": "Bar",
+    "Art": ["Klassisch", "Historisch"],
+    "opening_hours": "Täglich ab 11 Uhr",
+    "age_structure": "20-70",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Universität",
+    "description": "Eine Legende in München. Früher Treffpunkt von Künstlern und Literaten."
+  },
+  {
+    "id": 27,
+    "name": "Peaches",
+    "coordinates": { "lat": 48.153411, "lng": 11.581222 },
+    "type": "Bar",
+    "Art": ["Partystimmung", "Cocktail Bar"],
+    "opening_hours": "Täglich ab 19 Uhr",
+    "age_structure": "18-25",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Giselastraße",
+    "description": "Berühmt für große Cocktails und ausgelassene Stimmung am Wochenende."
+  },
+  {
+    "id": 28,
+    "name": "Fox",
+    "coordinates": { "lat": 48.150988, "lng": 11.574122 },
+    "type": "Bar",
+    "Art": ["Trendy", "Cool"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "20-35",
+    "public_transport": ["U3", "U6"],
+    "next_station": "Universität",
+    "description": "Stylische Bar mit sehr guten Drinks und modernem Interieur."
+  },
+  {
+    "id": 29,
+    "name": "Freebird",
+    "coordinates": { "lat": 48.154566, "lng": 11.568944 },
+    "type": "Bar",
+    "Art": ["Rockig", "Entspannt"],
+    "opening_hours": "Täglich ab 19 Uhr",
+    "age_structure": "20-40",
+    "public_transport": ["U2"],
+    "next_station": "Josephsplatz",
+    "description": "Kleine, feine Bar mit Fokus auf gute Musik und Craft Beer."
+  },
+  {
+    "id": 30,
+    "name": "Klenze 17",
+    "coordinates": { "lat": 48.130122, "lng": 11.576544 },
+    "type": "Bar",
+    "Art": ["Urig", "Gemütlich"],
+    "opening_hours": "Täglich ab 18 Uhr",
+    "age_structure": "20-60",
+    "public_transport": ["U1", "U2"],
+    "next_station": "Fraunhoferstraße",
+    "description": "Zwar Glockenbach, aber durch die Nähe zur TUM-Innenstadt auch bei Studenten extrem beliebt."
   }
-  
 ]
