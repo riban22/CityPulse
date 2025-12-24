@@ -220,12 +220,24 @@ onMounted(() => {
             <v-list-item v-if="selectedLocation.category === 'Club'" prepend-icon="mdi-music-note" :title="`Musik: ${selectedLocation.music ? selectedLocation.music.join(', ') : 'N/A'}`"></v-list-item>
             <v-list-item v-else prepend-icon="mdi-tag" :title="`Art: ${selectedLocation.Art ? selectedLocation.Art.join(', ') : 'N/A'}`"></v-list-item>
 
-            <v-list-item prepend-icon="mdi-account-multiple" :title="`Clientèle: ${selectedLocation.clientele || 'N/A'}`"></v-list-item>
+            <v-list-item prepend-icon="mdi-account-multiple">
+    <div class="wrap-text text-grey-lighten-1">
+        Clientèle: {{ selectedLocation.clientele || 'N/A' }}
+    </div>
+</v-list-item>
             <v-list-item prepend-icon="mdi-account-search" :title="`Alter: ${selectedLocation.age_structure || 'N/A'}`"></v-list-item>
 
-            <v-list-item prepend-icon="mdi-clock" :title="`Öffnungszeiten: ${selectedLocation.opening_hours || 'N/A'}`"></v-list-item>
+            <v-list-item prepend-icon="mdi-clock">
+    <div class="wrap-text text-grey-lighten-1">
+        Öffnungszeiten: {{ selectedLocation.opening_hours || 'N/A' }}
+    </div>
+</v-list-item>
 
-            <v-list-item prepend-icon="mdi-train-car" :title="`Anbindung: ${selectedLocation.public_transport ? selectedLocation.public_transport.join(', ') : 'N/A'}`"></v-list-item>
+            <v-list-item prepend-icon="mdi-train-car">
+    <div class="wrap-text text-grey-lighten-1">
+        Anbindung: {{ selectedLocation.public_transport ? selectedLocation.public_transport.join(', ') : 'N/A' }}
+    </div>
+</v-list-item>
             <v-list-item prepend-icon="mdi-map-marker-radius" :title="`Station: ${selectedLocation.next_station || 'N/A'}`"></v-list-item>
 
             <v-divider class="my-3" color="grey"></v-divider>
@@ -319,4 +331,17 @@ onMounted(() => {
 .event-card { transition: transform 0.2s; border: 1px solid #333; }
 .event-card:hover { transform: translateY(-2px); border-color: #555; }
 .scrollable-list { max-height: 200px; overflow-y: auto; }
+
+.wrap-text {
+    white-space: normal !important; /* Verhindert das Abschneiden (...) */
+    word-wrap: break-word;          /* Bricht lange Wörter um */
+    display: block;
+    line-height: 1.5;               /* Etwas mehr Zeilenabstand für bessere Lesbarkeit */
+}
+
+/* Sorgt dafür, dass die List-Items in der Sidebar flexibel hoch werden */
+:deep(.v-list-item-title) {
+    white-space: normal !important;
+}
 </style>
+
