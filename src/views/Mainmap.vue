@@ -5,6 +5,79 @@ import clubsData from '../data/clubs.json';
 import barsData from '../data/bars.json'; 
 import eventsData from '../data/events.json'; 
 
+// Variable: center (Das ist dein User-Standort)
+// Variable: selectedLocation (Das ist der Club, den man angeklickt hat)
+
+// --- Google Maps URL ---
+const googleMapsUrl = computed(() => {
+  // Sicherheitscheck: Ohne Club-Koordinaten geht nichts
+  if (!selectedLocation.value?.coordinates) return undefined;
+
+  const destLat = selectedLocation.value.coordinates.lat;
+  const destLng = selectedLocation.value.coordinates.lng;
+
+  let url = `https://www.google.com/maps/dir/?api=1&destination=${destLat},${destLng}&travelmode=transit`;
+
+  // Startpunkt anhängen (falls vorhanden)
+  try {
+    if (center.value) {
+      let startLat, startLng;
+      // MapLibre Format [lng, lat]
+      if (Array.isArray(center.value) && center.value.length >= 2) {
+        startLng = center.value[0];
+        startLat = center.value[1];
+      } 
+      // Objekt Format { lat, lng }
+      else if (center.value.lat) {
+        startLat = center.value.lat;
+        startLng = center.value.lng;
+      }
+
+      if (startLat && startLng) {
+        url += `&origin=${startLat},${startLng}`;
+      }
+    }
+  } catch (e) {
+    // Fehler beim Startpunkt ignorieren, Link funktioniert trotzdem
+  }
+  return url;
+});
+
+// --- Apple Maps URL ---
+const appleMapsUrl = computed(() => {
+  // Sicherheitscheck
+  if (!selectedLocation.value?.coordinates) return undefined;
+
+  const destLat = selectedLocation.value.coordinates.lat;
+  const destLng = selectedLocation.value.coordinates.lng;
+
+  // Basis-URL (funktioniert immer)
+  // daddr = Destination Address (Ziel)
+  // dirflg=r = Public Transport (Öffis)
+  let url = `http://maps.apple.com/?daddr=${destLat},${destLng}&dirflg=r`;
+
+  // Startpunkt anhängen (falls vorhanden)
+  try {
+    if (center.value) {
+      let startLat, startLng;
+      if (Array.isArray(center.value) && center.value.length >= 2) {
+        startLng = center.value[0];
+        startLat = center.value[1];
+      } else if (center.value.lat) {
+        startLat = center.value.lat;
+        startLng = center.value.lng;
+      }
+
+      // saddr = Source Address (Start)
+      if (startLat && startLng) {
+        url += `&saddr=${startLat},${startLng}`;
+      }
+    }
+  } catch (e) {
+    // Fehler ignorieren
+  }
+  return url;
+});
 // --- DATEN ---
 const allLocations = [
     ...clubsData.map(c => ({ ...c, category: 'Club' })),
@@ -203,6 +276,33 @@ onMounted(() => {
     </v-menu>
 
     <v-navigation-drawer v-model="drawer" temporary width="350" color="#1e1e1e" location="right" style="z-index: 2000;" elevation="5">
+
+<div class="mt-4" v-if="selectedLocation">
+  
+  <v-btn
+    block
+    color="blue-darken-1"
+    variant="tonal"
+    prepend-icon="mdi-google-maps"
+    :href="googleMapsUrl"
+    target="_blank"
+    class="mb-2" 
+  >
+    Google Maps
+  </v-btn>
+
+  <v-btn
+    block
+    color="blue-darken-1"
+    variant="tonal"
+    prepend-icon="mdi-apple"
+    :href="appleMapsUrl"
+    target="_blank"
+  >
+    Apple Maps
+  </v-btn>
+  
+</div>
     <v-card v-if="selectedLocation" class="pa-4" color="transparent" flat> 
         <v-card-title class="text-h5 text-white font-weight-bold">{{ selectedLocation.name }}</v-card-title>
         
