@@ -217,9 +217,14 @@ onMounted(() => {
         <v-slide-group class="pa-2" show-arrows>
             <v-slide-group-item v-for="event in sortedFutureEvents" :key="event.id">
                 <v-card width="240" color="#2c2c2c" class="ma-2 rounded-lg elevation-4 event-card" link>
-                    <v-img height="100" cover src="https://cdn.vuetifyjs.com/images/cards/concert.jpg" class="align-end">
-                        <div class="date-badge">{{ formatDate(event.date) }}</div>
-                    </v-img>
+                  <v-img 
+  height="100" 
+  cover 
+  :src="event.imageUrl || 'https://cdn.vuetifyjs.com/images/cards/concert.jpg'" 
+  class="align-end"
+>
+  <div class="date-badge">{{ formatDate(event.date) }}</div>
+</v-img>
                     <v-card-text class="pa-3">
                         <div class="text-subtitle-2 font-weight-bold text-white text-truncate mb-1">{{ event.title }}</div>
                         <div class="d-flex align-center text-caption text-grey-lighten-1">

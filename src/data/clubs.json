@@ -4,8 +4,8 @@
     "id": 1,
     "name": "Pacha",
     "coordinates": {
-      "lat": 48.142101,  
-      "lng": 11.569813
+      "lat": 48.142102190048604,
+      "lng": 11.569833514968444
     },
     "type": "Club", 
     "music": ["PoP"], 
@@ -23,8 +23,8 @@
     "id": 2,
     "name": "Neuraum",
     "coordinates": {
-      "lat": 48.137154,  
-      "lng": 11.575490
+      "lat": 48.14238903621508,
+      "lng": 11.551000049435846
     },
     "type": "Club", 
     "music": ["Techno", "House"], 
@@ -44,8 +44,8 @@
     "id": 3,
     "name": "Harry Klein",
     "coordinates": {
-      "lat": 48.135125,  
-      "lng": 11.575364
+      "lat": 48.137779967420116,
+      "lng": 11.564885310795407
     },
     "type": "Club", 
     "music": ["Techno", "Electro"], 
@@ -64,8 +64,8 @@
     "id": 4,
     "name": "Muffatwerk",
     "coordinates": {
-      "lat": 48.131500,  
-      "lng": 11.593200
+      "lat": 48.132748195089,
+      "lng": 11.589374691758033
     },
     "type": "Club", 
     "music": ["Rock", "Indie", "Electronic"], 
@@ -84,8 +84,8 @@
     "id": 5,
     "name": "Blitz Club",
     "coordinates": {
-      "lat": 48.135300,  
-      "lng": 11.576000
+      "lat": 48.131628323900344,
+      "lng": 11.586495253125308
     },
     "type": "Club", 
     "music": ["Techno", "House"], 
@@ -99,33 +99,13 @@
     "next_station": "Sendlinger Tor",
     "description": "Ein moderner Club mit Fokus auf elektronische Musik."
   },
-
-  {
-    "id": 6,
-    "name": "Cocoon Club",
-    "coordinates": {
-      "lat": 48.140000,  
-      "lng": 11.560000
-    },
-    "type": "Club", 
-    "music": ["Techno", "House"], 
-    "opening_hours": "Freitag und Samstag ab 23 Uhr",
-    "capacity_simulated": "High",
-    "clientele": "Exklusiv",
-
-    
-    "age_structure": "21-35",
-    "public_transport": ["U4","U5"],
-    "next_station": "Karlsplatz (Stachus)",
-    "description": "Ein exklusiver Club mit international renommierten DJs."
-  },
-
+ 
   {
     "id": 7,
     "name": "Rote Sonne",
     "coordinates": {
-      "lat": 48.130000,  
-      "lng": 11.580000
+      "lat": 48.142226777426245,
+      "lng": 11.57090247031052
     },
     "type": "Club", 
     "music": ["Techno", "House", "Electro"], 
@@ -144,8 +124,8 @@
     "id": 8,
     "name": "Backstage",
     "coordinates": {
-      "lat": 48.150000,  
-      "lng": 11.550000
+      "lat": 48.145155852909944,
+      "lng": 11.520989454287198
     },
     "type": "Club", 
     "music": ["Rock", "Punk", "Metal"], 
@@ -164,8 +144,8 @@
     "id": 9,
     "name": "Harry's New York Bar",
     "coordinates": {
-      "lat": 48.137000,  
-      "lng": 11.575000
+      "lat": 48.09781092799016,
+      "lng": 11.528672325403226
     },
     "type": "Club", 
     "music": ["Jazz", "Blues"], 
@@ -184,8 +164,8 @@
     "id": 10,
     "name": "Kultfabrik",
     "coordinates": {
-      "lat": 48.130500,  
-      "lng": 11.600000
+      "lat": 48.12441323649931,
+      "lng": 11.607965299144993
     },
     "type": "Club Complex", 
     "music": ["Various"], 
@@ -204,7 +184,7 @@
   {
     "id": 11,
     "name": "089 Bar",
-    "coordinates": { "lat": 48.140800, "lng": 11.567500 },
+    "coordinates": { "lat": 48.14232104798777, "lng": 11.570303643034823 },
     "type": "Club",
     "music": ["PoP", "Charts"],
     "opening_hours": "Di-Sa ab 21 Uhr",
@@ -218,7 +198,7 @@
   {
     "id": 12,
     "name": "Bahnwärter Thiel",
-    "coordinates": { "lat": 48.123500, "lng": 11.555500 },
+    "coordinates": { "lat": 48.12234552455423, "lng": 11.55549264516473 },
     "type": "Club",
     "music": ["Techno", "Electro"],
     "opening_hours": "Fr-Sa ab 23 Uhr",
@@ -232,7 +212,7 @@
   {
     "id": 13,
     "name": "Pimpernel",
-    "coordinates": { "lat": 48.132800, "lng": 11.569500 },
+    "coordinates": { "lat": 48.13252301878862, "lng": 11.568011558660015 },
     "type": "Club",
     "music": ["House", "Electro"],
     "opening_hours": "Täglich ab 22 Uhr",
@@ -246,7 +226,7 @@
   {
     "id": 14,
     "name": "Call Me Drella",
-    "coordinates": { "lat": 48.140200, "lng": 11.567000 },
+    "coordinates": { "lat": 48.142620753918564, "lng": 11.57107155497057 },
     "type": "Club",
     "music": ["Hip Hop", "House"],
     "opening_hours": "Do-Sa ab 23 Uhr",
@@ -257,24 +237,10 @@
     "next_station": "Karlsplatz (Stachus)",
     "description": "Ein surreales Theater-Ambiente trifft auf moderne Club-Beats."
   },
-  {
-    "id": 15,
-    "name": "Crux",
-    "coordinates": { "lat": 48.138500, "lng": 11.579500 },
-    "type": "Club",
-    "music": ["Hip Hop"],
-    "opening_hours": "Fr-Sa ab 23 Uhr",
-    "capacity_simulated": "High",
-    "clientele": "Hip Hop Fans",
-    "age_structure": "18-28",
-    "public_transport": ["S1-S8", "U3", "U6"],
-    "next_station": "Marienplatz",
-    "description": "Der Place-to-be für alle Hip-Hop und Trap Liebhaber im Herzen der Stadt."
-  },
-  {
+ {
     "id": 16,
     "name": "Charlie",
-    "coordinates": { "lat": 48.121500, "lng": 11.583000 },
+    "coordinates": { "lat": 48.12026942554062, "lng": 11.570784676333533 },
     "type": "Club",
     "music": ["Techno"],
     "opening_hours": "Fr-Sa ab 23 Uhr",
@@ -288,7 +254,7 @@
   {
     "id": 17,
     "name": "Milchbar",
-    "coordinates": { "lat": 48.140500, "lng": 11.566500 },
+    "coordinates": { "lat": 48.13535159450968, "lng": 11.566771410795429 },
     "type": "Club",
     "music": ["80s", "90s", "Charts"],
     "opening_hours": "Mo-So ab 22 Uhr",
@@ -302,7 +268,7 @@
   {
     "id": 18,
     "name": "Technikum",
-    "coordinates": { "lat": 48.124500, "lng": 11.605500 },
+    "coordinates": { "lat": 48.12357492164047, "lng": 11.607188353125084 },
     "type": "Club",
     "music": ["Electro", "Live"],
     "opening_hours": "Je nach Event",
@@ -316,7 +282,7 @@
   {
     "id": 19,
     "name": "Milla Club",
-    "coordinates": { "lat": 48.130500, "lng": 11.572500 },
+    "coordinates": { "lat": 48.12912965127048, "lng": 11.568336443031935 },
     "type": "Club",
     "music": ["Indie", "Electronic"],
     "opening_hours": "Täglich ab 20 Uhr",
@@ -330,7 +296,7 @@
   {
     "id": 20,
     "name": "Grinsekatze",
-    "coordinates": { "lat": 48.124000, "lng": 11.604000 },
+    "coordinates": { "lat": 48.137612458418566, "lng": 11.56447083875725 },
     "type": "Club",
     "music": ["House", "Techno"],
     "opening_hours": "Fr-Sa ab 23 Uhr",
@@ -345,8 +311,8 @@
     "id": 21,
     "name": "Nachtgalerie",
     "coordinates": {
-      "lat": 48.144400,
-      "lng": 11.531200
+      "lat": 48.13988718297298,
+      "lng": 11.523204470310416
     },
     "type": "Club",
     "music": ["Charts", "Hip Hop", "Party-Hits"],
